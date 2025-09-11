@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Souhaila Bachoukh
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Startniveau: blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Focus: surface plane
  
 </details>
 
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  [link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp](https://nl.newbalance.eu/nl?cq_src=google_ads&cq_cmp=19665135109&cq_con=151667719371&cq_term=new%20balance&cq_med=&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&gclsrc=aw.ds&gad_source=1&gad_campaignid=19665135109&gbraid=0AAAAADkO1QIVu5qPdhCIhH_PQ2XnPVJg1&gclid=EAIaIQobChMIkevLvd_EjwMVEplQBh32Ew68EAAYASAAEgIltvD_BwE)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  hier de naam van de pagina: Schoenen en Kleding | Officiële Site - New Balance
+  <img src="readme-images/homepagina-newbalance.png" width="375px" alt="homepagina newbalance website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  hier de naam van de pagina: Unisex 530 schoenen - New Balance
+  <img src="readme-images/detailpagina-newbalance.png" width="375px" alt="detailpagina newbalance website">
  
 </details>
 
@@ -57,6 +57,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - 
 
 </details>
 
