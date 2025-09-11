@@ -57,7 +57,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-  - 
+  - Het is duidelijk dat je op de homepagina bent van New Balance en er een image zichtbaar is, maar je weet niet wat voor afbeelding. Ook wordt er opgenoemd dat er navigation is,maar wordt de informatie onder elk kopje niet helemaal opgelezen. 
+ 
+  - Er wordt aangegeven bij welke heading je zit, en deze wordt opgelezen. Ook wordt aangegeven dat dat de laatste heading is op een pagina als dat zo is.
+
+  - Een link wordt aangegeven met de naam ervan, zodat je weet dat je erop kunt klikken om naar die pagina te gaan.
+
+  - Er wordt aangegeven dat je naar volgende slide kan gaan door middel van een button. 
+
+  - Bij elk plaatje wordt genoemd dat het een image is en de informatie daarbij wordt ook opgenoemd, maar het gaat best snel en zorgt voor verwarring door herhaling van “new line”.
+
+  - Kon niet navigeren naar de andere kleuren van de schoenen op de productpagina, hij sprong van de beschrijving naar maat zonder de andere opties te kunnen selecteren.
+
+  - Zowel de maten die wel als niet op voorraad zijn worden opgenoemd.
+
+  - De knop standaard wordt niet opgenoemd wanneer je door de pagina navigeert op de productpagina.
 
 </details>
 
@@ -69,7 +83,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdownschets-homepagina.jpg" width="375px" alt="breakdown van de homepagina">
+  <img src="readme-images/breakdownschets-productpagina.jpg" width="375px" alt="breakdown van de productpagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
@@ -90,6 +105,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Dit ging goed:
+  - Tijdens het coderen van de HTML van de homepagina ging het coderen van de main best soepel.
+
+  Dit was lastig:
+  - De productpagina vond ik wat moeilijker om te coderen door complexere elementen die daarin zitten.
+  - Ook het coderen van een hamburgermenu begrijp ik nog niet echt.
 
 
   ### Agenda voor meeting
