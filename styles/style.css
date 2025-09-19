@@ -324,7 +324,6 @@ main section:nth-of-type(3) ul:first-of-type li {
   	flex-shrink:0;
 	scroll-snap-align:center;
 	list-style: none;
-	
 }
 
 main section:nth-of-type(3) ul:first-of-type a {
@@ -481,6 +480,7 @@ footer details summary {
 	font-weight: bolder;
 }
 
+/*dropdowns pijltjes*/
 footer summary::after {
   	content: "";
   	width: 0.8em;
@@ -649,20 +649,35 @@ footer section p:nth-of-type(2) {
 
 
 /* Kleur kiezen */
-form fieldset:first-of-type {
-  	display: flex;              
+
+form fieldset:first-of-type{
 	border: none;
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+form fieldset:first-of-type ul {
+  	display: flex;              
+	gap:0.4em;
+}
+
+form fieldset:first-of-type li {
+  	width: 20%;          
+  	height: auto;
+  	cursor: pointer;
 }
 
 form fieldset:first-of-type img {
-  	width: 40%;          
-  	height: auto;
-  	cursor: pointer;
-	border-radius: 0.3em;
+	border-radius: 0.4em;
 }
+
 
 form fieldset:first-of-type input[type="radio"] {
   display: none;   
+}
+
+.productpagina form:first-of-type p {
+	font-size: 0.85em;
 }
 
 /* maat kiezen */
@@ -740,6 +755,7 @@ form fieldset:first-of-type input[type="radio"] {
 	align-items: center;
 	margin-left: 1em;
 	margin-right: 1em;
+	margin-bottom: 2em;
 }
 
 .productpagina div img {
@@ -753,4 +769,123 @@ form fieldset:first-of-type input[type="radio"] {
 	font-size: 0.8em !important; 
 	margin: 0;
 	
+}
+
+/*beschrijving*/
+.productpagina details:first-of-type {
+	border-top: 1px solid #bec0c3;
+	margin-left: 1em;
+	margin-right: 1em;
+	border-bottom: 1px solid #bec0c3;
+}
+
+.productpagina details:first-of-type summary {
+	margin-top: 0.8em;
+	margin-left: 0.8em;
+	margin-bottom: 0.9em;
+	list-style: none;
+	font-family:"Proxima Nova W01 Regular", Arial, sans-serif;
+}
+
+
+
+/*productdetails*/
+.productpagina details:nth-of-type(2) {
+	margin-left: 1em;
+	margin-right: 1em;
+	border-bottom: 1px solid #bec0c3;
+	margin-bottom: 0.8em;
+}
+
+.productpagina details:nth-of-type(2) summary {
+	margin: 0.8em;
+	list-style: none;
+	font-family:"Proxima Nova W01 Regular", Arial, sans-serif;
+	font-weight: 200;
+	display: flex;
+	justify-content: space-between;
+}
+
+.productpagina a:last-of-type {
+	background-color: white;
+	padding: 0;
+	color: black;
+	border: none;
+	text-decoration: underline;
+	font-size: 0.75em;
+	margin-left: 1.2em;
+	text-align: left;
+}
+
+/*recentbekeken*/
+.recentbekeken h2 {
+	font-size: 1.2em !important;
+	font-weight: bolder;
+}
+
+.recentbekeken ul {
+	display: flex;
+	max-width: 100%;
+	gap:0.3em;
+	padding: 0;
+	overflow:auto;
+  	scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+  	overscroll-behavior-x:contain;
+	scrollbar-width: none;
+}
+
+.recentbekeken li {
+	flex-basis:48%;
+  	flex-shrink:0;
+	scroll-snap-align:center;
+	list-style: none;
+}
+
+.recentbekeken li img {
+	width: 176px !important;
+	height: 176px !important;
+	
+ 
+}
+
+.recentbekeken a {
+	text-decoration: none;
+	font-size: 0.9em;
+	font-weight: bolder;
+}
+
+.recentbekeken p {
+	font-family:"Proxima Nova W01 Regular", Arial, sans-serif;
+	font-weight: 200;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	font-size: 0.9em;
+}
+
+/*beoordelingen*/
+.beoordelingen h2 {
+	font-family:"Proxima Nova W01 Regular", Arial, sans-serif !important;
+	font-size: 1.5em !important;
+	font-weight: bolder !important;
+}
+
+.beoordelingen p {
+	font-size: 0.8em !important;
+	margin-top: 0;
+	margin-left: 0.6em;
+}
+
+.beoordelingen ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin-left: 0.5em;
+	gap: 1em;
+}
+
+.beoordelingen li button {
+	border-color: rgb(207, 10, 44);
+	padding: 1em;
+	border-radius: 0.8em;
 }
