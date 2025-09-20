@@ -37,19 +37,27 @@ html, body {
 
 /*header*/
 header div {
+	padding-top: 1em;
 	color: white;
 	background-color: #151415;
 	font-size: .8rem;
-	padding-top: 1em;
-	padding-bottom: 1.8em;
-	display: flex;
-	justify-content: center;
+	text-align: center;
 	margin-bottom: 1em;
 	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
 }
 
-header {
-	margin-bottom: 2em;
+header div button {
+	color: white;
+	background-color: #151415;
+	font-size: .8rem;
+	border: none;
+	margin-bottom: 1em;
+}
+
+header div p {
+  max-height: 0;             
+  overflow: hidden;
+  padding: 0;
 }
 
 header img {
@@ -61,7 +69,57 @@ header > ul:first-of-type {
 	display: flex;
 	background: white;
 	list-style: none;
-	
+	padding: 0;
+}
+
+/*header icoontjes*/
+header > ul:first-of-type li svg {
+    width: 2em;
+    height: 2em;
+    display: block;
+	color: black;
+}
+
+header > ul:first-of-type li:first-of-type button {
+	border: none;
+	background-color: white;
+}
+
+header > ul:first-of-type li:first-of-type button svg {
+	width: 2.3em;
+    height: 2.5em;
+}
+
+header > ul:first-of-type li:nth-of-type(2) a svg {
+	width: 1.8em;
+    height: 1.8em;
+	margin-left: 0.3em;
+	margin-top: 0.2em;
+}
+
+
+header > ul:first-of-type li:nth-of-type(3) a img {
+	width: 3em;
+    height: 3em;
+	margin-left: 5.5em;
+	padding-bottom: 1em;
+}
+
+header > ul:first-of-type li:nth-of-type(4) button {
+	border: none;
+	background-color: white;
+	margin-left: 5em;
+}
+
+header > ul:first-of-type li:nth-of-type(4) button svg {
+	width: 1.8em;
+    height: 1.8em;
+}
+
+header > ul:first-of-type li:nth-of-type(5) a svg {
+	width: 1.8em;
+    height: 1.8em;
+	margin-left: 1em;
 }
 
 /*hamburgermenu*/
@@ -97,11 +155,14 @@ nav.toonMenu {
 	transform: translateY(0); 
 }
 
-header nav button img[alt="terug knop"],
-header nav h2,
-header nav button img[alt="sluit menu"]:nth-of-type(2) {
-	display: none;
+header nav button svg[alt="sluit menu"] {
+	width: 1.8em;
+    height: 1.8em;
+	margin-left: 0.3em;
+	margin-top: 0.2em;
 }
+
+
 
 /*hamburgersubmenu*/
 nav ul:nth-of-type(2) {
@@ -156,14 +217,6 @@ header nav li a {
 }
 
 
-/*header icoontjes*/
-header button {
-	border: none;
-	
-	
-}
-
-
 /*main navigatie*/
 main nav ul {
 	display: flex;
@@ -178,6 +231,7 @@ main nav ul {
   	scrollbar-width:auto;
   	scrollbar-color:#ccc #fff;
 	margin-bottom: 1em;
+	margin-top: -0.8em;
 }
 
 main nav li {
@@ -198,6 +252,37 @@ main nav a {
 	font-weight: 100;
 }
 
+/*chatbot*/
+
+main > button:first-of-type {
+	border: none;
+	position:fixed;
+	background-color: #cf0a2c;
+	border-radius: 3.5em;
+	right: 1.25rem;
+	bottom: .625rem;
+	z-index: 10;
+	color:white;
+	padding: 1.3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main section:first-of-type > button:first-of-type {
+	border: none;
+	position:fixed;
+	background-color: #cf0a2c;
+	border-radius: 3.5em;
+	right: 1.25rem;
+	bottom: .625rem;
+	z-index: 10;
+	color:white;
+	padding: 1.3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 /*section 1*/
 main section:first-of-type img {
@@ -314,7 +399,10 @@ main section:nth-of-type(3) ul:first-of-type {
   	scroll-snap-type:x mandatory;
 	scroll-behavior:smooth;
   	overscroll-behavior-x:contain;
-	scrollbar-width: none;
+	scrollbar-width: thin;
+	padding-bottom: 1.5em;
+	scrollbar-color:#000;
+	
 }
 
 main section:nth-of-type(3){
@@ -349,6 +437,25 @@ main section:nth-of-type(3) ul:first-of-type p {
 	font-weight: 100;
 	font-size: 0.9em;
 }
+
+/*scrollbar*/
+
+
+
+/*
+.carousel-progress {
+	background-color: #ccc;
+	width: 40%;
+	margin-left: 4em;
+	border-radius: 0.4em;
+}
+
+.carousel-progress-bar {
+	background-color: #000;
+	height: 0.3em;
+  	transition: width 400ms ease;
+  	width: 0;
+}*/
 
 /*section 3 shop nu knop*/
 main section:nth-of-type(3) > a:last-of-type {
@@ -671,6 +778,7 @@ footer section p:nth-of-type(2) {
 	margin-bottom: 0;
 }
 
+
 /*Schoen foto's*/
 .productpagina main section:first-of-type ul:nth-of-type(2) {
 	display:flex;
@@ -681,24 +789,102 @@ footer section p:nth-of-type(2) {
 	list-style: none;
 	margin: 0;
   	padding: 0;
-
+	position:relative;
 }
 
 .productpagina main section:first-of-type ul:nth-of-type(2) button {
 	border: none;
 	width: 100%;
+	padding: 0;
+	
 }
 
 
 .productpagina main section:first-of-type ul:nth-of-type(2) li {
 	flex-basis:100%;
   	flex-shrink:0;
+	
 }
 
 .productpagina main section:first-of-type ul:nth-of-type(2) img {
   	width: 100%;
+	padding: 0;
 }
 
+/*Schoen foto's 2*/
+.productpagina main section:first-of-type ul:nth-of-type(3) {
+	display:flex;
+  	overflow:auto;
+  	scroll-snap-type:x mandatory;
+  	scroll-behavior:smooth;
+  	overscroll-behavior-x:contain;
+	list-style: none;
+	margin: 0;
+  	padding: 0;
+	position:relative;
+	display: none;
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(3) button {
+	border: none;
+	width: 100%;
+	padding: 0;
+	
+}
+
+
+.productpagina main section:first-of-type ul:nth-of-type(3) li {
+	flex-basis:100%;
+  	flex-shrink:0;
+	
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(3) img {
+  	width: 100%;
+	padding: 0;
+}
+
+/* shop de look knop */
+.productpagina main section:first-of-type ul:nth-of-type(2) li:last-child button {
+	color: #fff;
+	background-color: rgba(21, 20, 21, .8);
+	border-radius: 0.2em;
+	padding: 0.9em 1.5em;
+	max-width: fit-content;
+	font-size: 0.75em;
+	position:absolute;
+  	top: 0.5em;
+  	right: 0.5em;
+	font-weight: 100;
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(2) li:last-child button::after {
+    content: '↓';
+    position: absolute;
+    right: 0.5em;
+    top: 0.8em;
+}
+
+
+.productpagina main section:first-of-type ul:nth-of-type(3) li:last-child button {
+	color: #fff;
+	background-color: rgba(21, 20, 21, .8);
+	border-radius: 0.2em;
+	padding: 0.9em 1.5em;
+	max-width: fit-content;
+	font-size: 0.75em;
+	position:absolute;
+  	top: 0.5em;
+  	right: 0.5em;
+	font-weight: 100;
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(3) li:last-child button::after {
+    content: '↓';
+    position: absolute;
+    right: 0.5em;
+    top: 0.8em;
+}
 
 /* Kleur kiezen */
 
@@ -721,6 +907,7 @@ form fieldset:first-of-type li {
 
 form fieldset:first-of-type img {
 	border-radius: 0.4em;
+	border: 2px solid transparent;
 }
 
 
@@ -728,8 +915,13 @@ form fieldset:first-of-type input[type="radio"] {
   display: none;   
 }
 
+form fieldset:first-of-type input[type="radio"]:checked + img {
+  border-color: black;
+}
+
 .productpagina form:first-of-type p {
 	font-size: 0.85em;
+	margin-bottom: 3em;
 }
 
 /* maat kiezen */
@@ -739,6 +931,12 @@ form fieldset:first-of-type input[type="radio"] {
 	margin-bottom: 2em;
 }
 
+.productpagina main section:first-of-type form fieldset:nth-of-type(2) legend {
+	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+	font-size: 0.9em;
+	margin-left: 0.5em;
+}
+
 .productpagina main section:first-of-type form fieldset:nth-of-type(2) ul {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -746,6 +944,17 @@ form fieldset:first-of-type input[type="radio"] {
 	padding: 0;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
+	margin-top: 0.4em;
+}
+
+.productpagina main section form > button {
+	border: none;
+	background: none;
+	text-decoration: underline;
+	display: block; 
+    margin-left: auto;
+    margin-right: 0;
+	margin-bottom: -1em;
 }
 
 .productpagina main section:first-of-type form fieldset:nth-of-type(2) input[type="radio"] {
@@ -760,6 +969,12 @@ form fieldset:first-of-type input[type="radio"] {
 	text-align: center;
 	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
 	font-size: 0.9em;
+	transition: border-color 0.4s ease, background-color 0.4s ease; 
+}
+
+.productpagina main section:first-of-type form fieldset:nth-of-type(2) li:has(input[type="radio"]:checked) {
+	border: 2px solid #151415;
+	background-color: #ebeced;
 }
 
 /*breedte*/ 
@@ -770,7 +985,7 @@ form fieldset:first-of-type input[type="radio"] {
 	margin-left: 1em;
 }
 
-.productpagina main section:first-of-type > button:first-of-type {
+.productpagina main section:first-of-type > button:nth-of-type(2) {
 	border: 1px solid #bec0c3;
 	background-color: white;
 	padding: 0.9em 1.8em;
@@ -779,8 +994,13 @@ form fieldset:first-of-type input[type="radio"] {
 	margin-bottom: 3em;
 }
 
-/*Toevoegen aan winkelwagen button*/ 
 .productpagina main section:first-of-type > button:nth-of-type(2) {
+	border: 2px solid #151415;
+	background-color: #ebeced;
+}
+
+/*Toevoegen aan winkelwagen button*/ 
+.productpagina main section:first-of-type > button:nth-of-type(3) {
 	color: white;
 	border: 1px solid;
 	background-color: #cf0a2c;
@@ -833,13 +1053,27 @@ form fieldset:first-of-type input[type="radio"] {
 }
 
 .productpagina main section:first-of-type details:first-of-type summary {
-	margin-top: 0.8em;
-	margin-left: 0.8em;
-	margin-bottom: 0.9em;
+	margin-top: 0.6em;
+	margin-left: 0.3em;
+	margin-bottom: 0em;
 	list-style: none;
 	font-family:"Proxima Nova W01 Regular", Arial, sans-serif;
+	display: flex;
+	justify-content: space-between;
 }
 
+/*plusjes bij dropdowns*/
+.productpagina main section:first-of-type summary::after {
+	content: "+";
+  	font-size: 1.7em;   
+	margin-right: 0.5em; 
+	margin: 0;      
+	transition: 0.35s ease;
+}
+
+.productpagina main section:first-of-type details[open] summary::after {
+    content: "−";  
+}
 
 
 /*productdetails*/
@@ -847,16 +1081,48 @@ form fieldset:first-of-type input[type="radio"] {
 	margin-left: 1em;
 	margin-right: 1em;
 	border-bottom: 1px solid #bec0c3;
-	margin-bottom: 0.8em;
+	margin-bottom: 0em;
 }
 
 .productpagina main section:first-of-type details:nth-of-type(2) summary {
-	margin: 0.8em;
+	margin-top: 0.7em;
 	list-style: none;
 	font-family:"Proxima Nova W01 Regular", Arial, sans-serif;
 	font-weight: 200;
 	display: flex;
 	justify-content: space-between;
+	margin-right: 0em;
+}
+
+.productpagina main section:first-of-type details:nth-of-type(2) p {
+	font-weight: bolder;
+	font-size: 0.9em;
+}
+
+.productpagina main section:first-of-type details:nth-of-type(2) p:nth-of-type(2) {
+	display: list-item;
+  	list-style-type: disc;   
+  	margin-left: 1.5em;
+	font-weight: 200;
+	font-size: 0.9em;
+}
+
+.productpagina main section:first-of-type details:nth-of-type(2) ul {
+	display: list-item;
+  	list-style-type: disc;  
+  	margin-left: 1.5em;
+	margin-bottom: 1em;
+}
+
+.productpagina main section:first-of-type details:nth-of-type(2) ul li {
+	font-family:"Proxima Nova W01 Regular", Arial, sans-serif;
+	font-size: 0.9em;
+	font-weight: 200;
+}
+
+.productpagina main section:first-of-type details:nth-of-type(2) p:nth-of-type(4) {
+	font-size: 0.9em;
+	margin-left: 0;
 }
 
 .productpagina main section:first-of-type a:last-of-type {
@@ -865,9 +1131,10 @@ form fieldset:first-of-type input[type="radio"] {
 	color: black;
 	border: none;
 	text-decoration: underline;
-	font-size: 0.75em;
+	font-size: 0.8em;
 	margin-left: 1.2em;
 	text-align: left;
+	font-weight: 500;
 }
 
 /*recentbekeken*/
