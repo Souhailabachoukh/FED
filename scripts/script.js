@@ -38,4 +38,13 @@ function toonSubMenu () {
 /*header div*/
 
 
+/*flipcard - maak je look af*/
+const card = document.querySelectorAll('.eerstekaart');
+
+[...card].forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+  });
+});
+
 

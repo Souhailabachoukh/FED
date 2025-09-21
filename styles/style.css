@@ -393,20 +393,22 @@ main section:nth-of-type(3) h2:first-of-type {
 main section:nth-of-type(3) ul:first-of-type {
 	display: flex;
 	max-width: 100%;
-	gap:0.3em;
 	padding: 0;
 	overflow:auto;
   	scroll-snap-type:x mandatory;
 	scroll-behavior:smooth;
   	overscroll-behavior-x:contain;
-	scrollbar-width: thin;
-	padding-bottom: 1.5em;
+	padding-bottom: 1em;
 	scrollbar-color:#000;
-	
+	scrollbar-width:none;
+	scroll-marker-group: after;
+	gap: 0.5em;
 }
 
 main section:nth-of-type(3){
 	margin-bottom: 3em;
+	display: flex;
+	flex-direction: column;
 }
 
 main section:nth-of-type(3) ul:first-of-type img {
@@ -439,23 +441,46 @@ main section:nth-of-type(3) ul:first-of-type p {
 }
 
 /*scrollbar*/
-
-
-
-/*
-.carousel-progress {
-	background-color: #ccc;
-	width: 40%;
+main section:nth-of-type(3) ul:first-of-type::scroll-marker-group {
+	display:flex;
+    justify-content:flex-start;
+    align-content:center;
+    flex-wrap:wrap;
 	margin-left: 4em;
-	border-radius: 0.4em;
+	margin-top: 1em;
 }
 
-.carousel-progress-bar {
-	background-color: #000;
-	height: 0.3em;
-  	transition: width 400ms ease;
-  	width: 0;
-}*/
+main section:nth-of-type(3) ul:first-of-type li::scroll-marker {
+	content: '' / attr(data-label);
+    display: flex;
+    width: 1.6em;
+	height: 0.25em;
+    aspect-ratio: 10;
+    background-color:#00000059;
+    transition: 80ms;
+}
+
+li::scroll-marker:target-current {
+    background:#151415 !important;
+  }
+
+.productpagina section:nth-of-type(3) ul:first-of-type::scroll-marker-group {
+	display:flex;
+    justify-content: center;
+    align-content:center;
+    flex-wrap:wrap;
+	margin: 0;
+}
+
+.productpagina section:nth-of-type(3) ul:first-of-type li::scroll-marker {
+	content: '' / attr(data-label);
+    display: flex;
+    width: 1em;
+	height: 0.25em;
+    aspect-ratio: 10;
+    background-color:#00000059;
+    transition: 80ms;
+}
 
 /*section 3 shop nu knop*/
 main section:nth-of-type(3) > a:last-of-type {
@@ -464,8 +489,12 @@ main section:nth-of-type(3) > a:last-of-type {
 	padding: 0.8em;
 	text-decoration: none;
 	color: black;
-	margin-top: 1em;
 	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+	max-width: fit-content;
+	align-self: flex-end;
+	margin-right: 3.4em;
+	margin-top: -1.5em;
+	font-size: 0.9em;
 }
 
 /*section 4: Shop per categorie*/
@@ -790,25 +819,67 @@ footer section p:nth-of-type(2) {
 	margin: 0;
   	padding: 0;
 	position:relative;
-}
-
-.productpagina main section:first-of-type ul:nth-of-type(2) button {
-	border: none;
+	scrollbar-width:none;
+	scroll-marker-group: after;
 	width: 100%;
-	padding: 0;
-	
 }
 
 
 .productpagina main section:first-of-type ul:nth-of-type(2) li {
 	flex-basis:100%;
   	flex-shrink:0;
-	
+	position: relative;
+	scroll-snap-align:center;
 }
+
 
 .productpagina main section:first-of-type ul:nth-of-type(2) img {
   	width: 100%;
 	padding: 0;
+}
+
+/*scrollbar productpagina foto's*/
+.productpagina main section:first-of-type ul:nth-of-type(2)::scroll-marker-group {
+	display:flex;
+	width: 100%;  
+	
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(2) li::scroll-marker {
+	content: '' / attr(data-label);
+    display: flex;
+   	width: 100%;  
+	height: 0.25em;
+    aspect-ratio: 10;
+    background-color:#00000059;
+    transition: 80ms;
+	margin-top: -0.3em;
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(2) li::scroll-marker:target-current {
+    background:#151415 !important;
+  }
+
+  /* shop de look knop */
+.productpagina main section:first-of-type ul:nth-of-type(2) li button  {
+	color: #fff;
+	background-color: rgba(21, 20, 21, .8);
+	border-radius: 0.2em;
+	padding: 0.9em 1.5em;
+	max-width: fit-content;
+	font-size: 0.75em;
+	position:absolute;
+  	top: 0.5em;
+  	right: 0.5em;
+	font-weight: 100;
+	border: none;
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(2) li button::after {
+    content: '↓';
+    position: absolute;
+    right: 0.5em;
+    top: 0.8em;
 }
 
 /*Schoen foto's 2*/
@@ -825,13 +896,6 @@ footer section p:nth-of-type(2) {
 	display: none;
 }
 
-.productpagina main section:first-of-type ul:nth-of-type(3) button {
-	border: none;
-	width: 100%;
-	padding: 0;
-	
-}
-
 
 .productpagina main section:first-of-type ul:nth-of-type(3) li {
 	flex-basis:100%;
@@ -844,47 +908,6 @@ footer section p:nth-of-type(2) {
 	padding: 0;
 }
 
-/* shop de look knop */
-.productpagina main section:first-of-type ul:nth-of-type(2) li:last-child button {
-	color: #fff;
-	background-color: rgba(21, 20, 21, .8);
-	border-radius: 0.2em;
-	padding: 0.9em 1.5em;
-	max-width: fit-content;
-	font-size: 0.75em;
-	position:absolute;
-  	top: 0.5em;
-  	right: 0.5em;
-	font-weight: 100;
-}
-
-.productpagina main section:first-of-type ul:nth-of-type(2) li:last-child button::after {
-    content: '↓';
-    position: absolute;
-    right: 0.5em;
-    top: 0.8em;
-}
-
-
-.productpagina main section:first-of-type ul:nth-of-type(3) li:last-child button {
-	color: #fff;
-	background-color: rgba(21, 20, 21, .8);
-	border-radius: 0.2em;
-	padding: 0.9em 1.5em;
-	max-width: fit-content;
-	font-size: 0.75em;
-	position:absolute;
-  	top: 0.5em;
-  	right: 0.5em;
-	font-weight: 100;
-}
-
-.productpagina main section:first-of-type ul:nth-of-type(3) li:last-child button::after {
-    content: '↓';
-    position: absolute;
-    right: 0.5em;
-    top: 0.8em;
-}
 
 /* Kleur kiezen */
 
@@ -1135,6 +1158,101 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 	margin-left: 1.2em;
 	text-align: left;
 	font-weight: 500;
+}
+
+
+
+
+/*maak de look af*/
+
+/*voorkant 1e kaart*/
+.productpagina main section:nth-of-type(2){
+	margin: 2.9em;
+}
+
+.productpagina main section:nth-of-type(2) h2{
+	margin-left: 0;
+}
+
+.eerstekaart {
+	position: relative;
+	height: 23em;
+	width: 100%;
+	border-radius: 1em;
+	background-color: rgb(236 236 236 / 54%);
+  	cursor: pointer;
+  	transform-style: preserve-3d;
+  	transform-origin: center right;
+  	transition: transform 1s;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.front img:first-of-type {
+	max-width: 6.5em;
+	position: absolute;
+	top: 2em;
+	right: 2em;
+	filter: drop-shadow(2.5px 2.5px 8px rgba(0, 0, 0, .3))
+}
+
+.front img:nth-of-type(3) {
+	max-width: 6.5em;
+	position: absolute;
+	top: 2em;
+	left: 2em;
+	filter: drop-shadow(2.5px 2.5px 8px rgba(0, 0, 0, .3));
+}
+
+.front img:nth-of-type(2) {
+	width: 3.7em;
+	height: 11em;
+	position: absolute;
+	top: 6.5em;
+	bottom: 1em;
+	left: 6.3em;
+	filter: drop-shadow(2.5px 2.5px 8px rgba(0, 0, 0, .3))
+}
+
+.front img:nth-of-type(4) {
+	position: absolute;
+	width: 4em;
+	height: 4em;
+	bottom: 6em;
+	right: 2em;
+	filter: drop-shadow(2.5px 2.5px 8px rgba(0, 0, 0, .3))
+}
+
+.front img:nth-of-type(5) {
+	position: absolute;
+	width: 4.6em;
+	height: 2.7em;
+	bottom: 5em;
+	left: 1em;
+	filter: drop-shadow(2.5px 2.5px 8px rgba(0, 0, 0, .3))
+}
+
+.front button {
+	background-color: #fff;
+	font-size: 1em;
+	position: absolute;
+	border-top: 1px solid #dddddd !important;
+	border: white;
+	padding: 0.5em 6em;
+	bottom: 0;
+	width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    padding: 1.3em;  
+}
+
+/*achterkant 1e kaart*/
+.back {
+	transform: rotateY(180deg);
+}
+
+.eerstekaart.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
 }
 
 /*recentbekeken*/
