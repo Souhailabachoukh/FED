@@ -26,7 +26,7 @@ function sluitMenu () {
 
 /*hamburgersubmenu*/
 const subMenuButton = document.querySelector("nav ul:first-of-type li:nth-of-type(4) a")
-const navSubMenu = document.querySelector("nav ul:nth-of-type(2)")
+const navSubMenu = document.querySelector("nav ul:nth-of-type(3)")
 
 subMenuButton.addEventListener("click", toonSubMenu);
 
@@ -35,7 +35,16 @@ function toonSubMenu () {
   navSubMenu.classList.toggle("toonSubMenu");
 }
 
-/*header div*/
+/*hamburgersubmenu2*/
+const subMenuButton2 = document.querySelector("nav ul:nth-of-type(3) li:nth-of-type(2) a")
+const navSubMenu2 = document.querySelector("nav ul:nth-of-type(4)")
+
+subMenuButton2.addEventListener("click", toonSubMenu2);
+
+function toonSubMenu2 () {
+  console.log("submenu2 geopend")
+  navSubMenu2.classList.toggle("toonSubMenu2");
+}
 
 
 /*flipcard - maak je look af*/
