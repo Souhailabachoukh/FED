@@ -47,13 +47,67 @@ function toonSubMenu2 () {
 }
 
 
-/*flipcard - maak je look af*/
-const card = document.querySelectorAll('.eerstekaart');
+/*Kleur kiezen met juiste carousel*/
+const optieReflection = document.querySelector ('input[value="reflection"]')
+const optieGreen = document.querySelector ('input[value="green"]')
 
-[...card].forEach((card)=>{
-  card.addEventListener( 'click', function() {
+const reflectionCarousel = document.querySelector (".productpagina main section:first-of-type ul:nth-of-type(2)")
+const greenCarousel = document.querySelector (".productpagina main section:first-of-type ul:nth-of-type(3)")
+
+
+optieReflection.addEventListener('click', showCarouselReflection)
+optieGreen.addEventListener('click', showCarouselGreen)
+
+
+function showCarouselReflection() {
+  reflectionCarousel.style.display = "flex";   
+  greenCarousel.style.display = "none";        
+  console.log("Reflection carousel zichtbaar");
+}
+
+function showCarouselGreen() {
+  greenCarousel.style.display = "flex";       
+  reflectionCarousel.style.display = "none"; 
+  console.log("Green carousel zichtbaar");
+}
+
+
+/*geluidje bij winkelwagenknop*/
+const winkelwagenknop = document.querySelector(".productpagina main section:first-of-type > button:nth-of-type(3)")
+
+winkelwagenknop.addEventListener('click', winkelwagenAudio)
+
+function winkelwagenAudio () {
+    const audio = new Audio("./audio/cashgeluid.mp3");
+    audio.play();
+}
+
+
+/*flipcard - maak je look af*/
+const card = document.querySelector('.eerstekaart');
+
+card.addEventListener('click', function() {
     card.classList.toggle('is-flipped');
-  });
 });
+
+/*animatie +1 bij winkelwagen*/
+const shopButton = document.querySelector(".productpagina main section:first-of-type > button:nth-of-type(3)");
+
+shopButton.addEventListener('click', addToShoppingCart)
+
+function addToShoppingCart() {
+    let shoppingCartAmount = document.querySelector("header > ul:first-of-type li:nth-of-type(5) span");
+    let currentAmount = shoppingCartAmount.innerHTML;
+    currentAmount = parseInt(currentAmount);
+    let newAmount = currentAmount + 1;
+    shoppingCartAmount.innerHTML = newAmount;
+
+    shoppingCartAmount.classList.add("updated");
+
+    setTimeout(function(){
+  shoppingCartAmount.classList.remove("updated");
+ }, 400);
+}
+
 
 

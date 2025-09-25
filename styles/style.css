@@ -42,19 +42,24 @@ p {
 
 
 /*header*/
+header {
+	position: sticky;
+	top: -4.3em;
+	z-index: 20;
+}
+
 header div {
 	padding-top: 1em;
 	background-color: #151415;
 	font-size: .8rem;
 	text-align: center;
-	margin-bottom: 1em;
 	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+	padding-bottom: 1em;
 }
 
 header div p {
 	color: white;
 	font-size: .8rem;
-	padding-bottom: 2em;
 	margin-top: 0;
 }
 
@@ -65,13 +70,6 @@ header img {
 	
 }
 
-header > ul:first-of-type {
-	display: flex;
-	background: white;
-	list-style: none;
-	padding: 0;
-}
-
 /*header icoontjes*/
 header > ul:first-of-type li svg {
     width: 2em;
@@ -80,9 +78,29 @@ header > ul:first-of-type li svg {
 	color: black;
 }
 
+header > ul:first-of-type {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	background: white;
+	z-index: 10;
+	list-style: none;
+	padding: 0;
+	padding-top: 0.3em;
+	
+}
+
+header > ul:first-of-type li:first-of-type { grid-column: 1; }
+header > ul:first-of-type li:nth-of-type(2) { grid-column: 2; }
+header > ul:first-of-type li:nth-of-type(3) { grid-column: 4; }
+header > ul:first-of-type li:nth-of-type(4) { grid-column: 6; }
+header > ul:first-of-type li:nth-of-type(5) { grid-column: 7; }
+
+
+
 header > ul:first-of-type li:first-of-type button {
 	border: none;
 	background-color: white;
+	padding-right: 0;
 }
 
 header > ul:first-of-type li:first-of-type button svg {
@@ -93,7 +111,6 @@ header > ul:first-of-type li:first-of-type button svg {
 header > ul:first-of-type li:nth-of-type(2) a svg {
 	width: 1.8em;
     height: 1.8em;
-	margin-left: 0.3em;
 	margin-top: 0.2em;
 }
 
@@ -101,14 +118,12 @@ header > ul:first-of-type li:nth-of-type(2) a svg {
 header > ul:first-of-type li:nth-of-type(3) a img {
 	width: 3em;
     height: 3em;
-	margin-left: 5.5em;
 	padding-bottom: 1em;
 }
 
 header > ul:first-of-type li:nth-of-type(4) button {
 	border: none;
 	background-color: white;
-	margin-left: 5em;
 }
 
 header > ul:first-of-type li:nth-of-type(4) button svg {
@@ -119,8 +134,46 @@ header > ul:first-of-type li:nth-of-type(4) button svg {
 header > ul:first-of-type li:nth-of-type(5) a svg {
 	width: 1.8em;
     height: 1.8em;
-	margin-left: 1em;
 }
+
+header > ul:first-of-type li:nth-of-type(5) a {
+	position:relative;
+}
+
+/*animatie +1 bij winkelwagen*/
+header > ul:first-of-type li:nth-of-type(5) a span {
+	position:absolute;
+  	right: 1em;
+  	top: 0;
+  	min-width: 1.5em;
+  	padding: 0.2em;
+  	background-color:crimson;
+  	border-radius: 1em;
+  	font-size: 0.7em;
+  	text-align: center;
+  	line-height: 1.2em;
+  	color:white;
+	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+}
+
+header > ul:first-of-type li:nth-of-type(5) a span.updated {
+	animation-name: updated;
+  	animation-duration: .2s;
+  	animation-iteration-count: 1;
+}
+
+@keyframes updated {
+  0% {
+    scale:1;
+  }
+  50% {
+    scale:1.5;
+  }
+  100% {
+    scale:1;
+  }
+}
+
 
 /*hamburgermenu*/
 header nav {
@@ -180,7 +233,6 @@ header nav ul a {
 nav.toonMenu {
 	translate: 0% 0%;
 	transform: translateY(0); 
-	
 }
 
 header nav > button:first-of-type {
@@ -190,7 +242,6 @@ header nav > button:first-of-type {
 	margin-top: 1.5em;
 	border-radius: 0.3em;
 	padding: 0.3em 0.3em;
-	
 	
 }
 
@@ -330,9 +381,7 @@ main nav ul {
 	margin-top: -0.8em;
 }
 
-main nav li {
-	margin-top: 0.4em;
-}
+
 
 main nav a {
 	text-decoration: none;
@@ -372,7 +421,7 @@ main section:first-of-type > button:first-of-type {
 	border-radius: 3.5em;
 	right: 1.25rem;
 	bottom: .625rem;
-	z-index: 10;
+	z-index: 99;
 	color:white;
 	padding: 1.3em;
 	display: flex;
@@ -495,7 +544,7 @@ main section:nth-of-type(3) ul:first-of-type {
 	scroll-behavior:smooth;
   	overscroll-behavior-x:contain;
 	padding-bottom: 1em;
-	scrollbar-color:#000;
+	scrollbar-color:#000 #000 ;
 	scrollbar-width:none;
 	scroll-marker-group: after;
 	gap: 0.5em;
@@ -806,7 +855,7 @@ footer section {
 	padding-top: 1em;
 }
 
-footer section p:first-of-type {
+footer section h2:first-of-type {
 	font-size: 1em;
 	margin-left: 1em;
 	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
@@ -834,7 +883,7 @@ footer section li a {
 	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
 }
 
-footer section p:nth-of-type(2) {
+footer section p:first-of-type {
 	font-size: 0.8em;
 	margin-left: 1em;
 	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
@@ -904,6 +953,9 @@ footer section p:nth-of-type(2) {
 	margin-bottom: 0;
 }
 
+.productpagina main section:first-of-type ul:first-of-type li svg polygon {
+	fill: rgb(233, 232, 232);
+}
 
 /*Schoen foto's*/
 .productpagina main section:first-of-type ul:nth-of-type(2) {
@@ -957,6 +1009,29 @@ footer section p:nth-of-type(2) {
     background:#151415 !important;
   }
 
+
+/*scrollbar productpagina foto's 2*/
+.productpagina main section:first-of-type ul:nth-of-type(3)::scroll-marker-group {
+	display:flex;
+	width: 100%;  
+	
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(3) li::scroll-marker {
+	content: '' / attr(data-label);
+    display: flex;
+   	width: 100%;  
+	height: 0.25em;
+    aspect-ratio: 10;
+    background-color:#00000059;
+    transition: 80ms;
+	margin-top: -0.3em;
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(3) li::scroll-marker:target-current {
+    background:#151415 !important;
+  }
+
   /* shop de look knop */
 .productpagina main section:first-of-type ul:nth-of-type(2) li button  {
 	color: #fff;
@@ -979,6 +1054,29 @@ footer section p:nth-of-type(2) {
     top: 0.8em;
 }
 
+  /* shop de look knop 2*/
+.productpagina main section:first-of-type ul:nth-of-type(3) li button  {
+	color: #fff;
+	background-color: rgba(21, 20, 21, .8);
+	border-radius: 0.2em;
+	padding: 0.9em 1.5em;
+	max-width: fit-content;
+	font-size: 0.75em;
+	position:absolute;
+  	top: 0.5em;
+  	right: 0.5em;
+	font-weight: 100;
+	border: none;
+}
+
+.productpagina main section:first-of-type ul:nth-of-type(3) li button::after {
+    content: '↓';
+    position: absolute;
+    right: 0.5em;
+    top: 0.8em;
+}
+
+
 /*Schoen foto's 2*/
 .productpagina main section:first-of-type ul:nth-of-type(3) {
 	display:flex;
@@ -990,6 +1088,9 @@ footer section p:nth-of-type(2) {
 	margin: 0;
   	padding: 0;
 	position:relative;
+	scrollbar-width:none;
+	scroll-marker-group: after;
+	width: 100%;
 	display: none;
 }
 
@@ -997,6 +1098,8 @@ footer section p:nth-of-type(2) {
 .productpagina main section:first-of-type ul:nth-of-type(3) li {
 	flex-basis:100%;
   	flex-shrink:0;
+	position: relative;
+	scroll-snap-align:center;
 	
 }
 
