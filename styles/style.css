@@ -34,6 +34,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	background-color:var(--color-background);
+	scroll-behavior: smooth;
 }
 
 p {
@@ -186,7 +187,7 @@ header nav {
   	translate:-100% 0%;
 	transform: translateY(-100%); 
   	transition: transform 0.3s ease;
-	z-index: 1;
+	z-index: 99;
 	overflow-y: auto;
 	
 }
@@ -268,6 +269,7 @@ nav ul:nth-of-type(3) {
 
 nav ul:nth-of-type(3).toonSubMenu {
 	translate: 0% 0%;
+	display: block;
 }
 
 header nav button {
@@ -295,7 +297,7 @@ header nav li {
 	
 }
 
-header nav a:first-of-type img{
+header nav a:first-of-type img {
 	margin-top: 1em;
 	max-width: 3.5em;
 	margin-left: 1em;
@@ -308,11 +310,15 @@ header nav li a {
 	color: black;
 }
 
-header nav button:nth-of-type(2) svg {
-	overflow: hidden;
+header nav button:nth-of-type(2) {
+	display: none;
+  	
 }
 
-
+header nav h2:first-of-type {
+	display: none;
+  	
+}
 
 /*hamburgersubmenu2*/
 header nav ul:nth-of-type(4) {
@@ -429,14 +435,204 @@ main section:first-of-type > button:first-of-type {
 	align-items: center;
 }
 
+/*chatbot uitklappen*/
+main dialog {
+	position:fixed;
+	bottom: 0;
+	z-index:999;
+	border: 1px solid rgb(146, 145, 145);
+	border-radius: 1.25rem 1.25rem 0 0;
+	background:rgb(220, 220, 220);
+	transition:  
+	display .15s allow-discrete,
+    overlay .15s allow-discrete,
+    transform .3s ease-out;  
+  	transform: translateY(100%);
+	filter: drop-shadow(2.5px 2.5px 8px rgba(0, 0, 0, .3))
+}
+
+main dialog[open] {
+	 transform: translateY(0);
+}
+
+@starting-style {
+  main dialog[open] {
+    transform: translateY(100%); 
+  }
+}
+
+
+
+.productpagina section:first-of-type dialog form h2 {
+	border-bottom: 1px solid rgb(90, 89, 89);
+	color: black;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	margin-right: 0.6em;
+}
+
+dialog form h2 {
+	border-bottom: 1px solid rgb(90, 89, 89);
+	color: black;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	margin-right: 0.6em;
+}
+
+.productpagina section:first-of-type dialog form {
+	position: relative;
+	
+}
+
+dialog form {
+	position: relative;
+	
+}
+
+.productpagina section:first-of-type dialog form button:first-of-type {
+	text-decoration: none;
+	color: #5e5d5d;
+	font-size: 1.5em;
+	top: 0em;
+	right: 0.5em;
+	position: absolute;
+}
+
+dialog form button:first-of-type {
+	text-decoration: none;
+	color: #5e5d5d;
+	font-size: 1.5em;
+	top: 0em;
+	right: 0.5em;
+	position: absolute;
+}
+
+.productpagina section:first-of-type dialog form a {
+	margin-bottom: 1em ;
+	background-color: rgb(220, 220, 220);
+	color: black ;
+	border: 1px solid #6f6e6e ;
+	text-align: left;
+	padding: 0.7em;
+	border-radius: 0;
+	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+	border-radius: 0.25em;
+}
+
+dialog form a {
+	margin-bottom: 1em ;
+	background-color: rgb(220, 220, 220);
+	color: black ;
+	border: 1px solid #6f6e6e ;
+	text-align: left;
+	padding: 0.7em;
+	border-radius: 0;
+	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+	border-radius: 0.25em;
+}
+
+
+.productpagina section:first-of-type dialog form a:nth-of-type(3) {
+	text-decoration: none;
+	padding: 0.7em;
+	font-weight: bold;
+	font-size: 1em;
+	margin-left: 1em;
+	background-color: rgb(220, 220, 220);
+	color: black ;
+	border: 1px solid #6f6e6e ;
+}
+
+dialog form a:nth-of-type(3) {
+	text-decoration: none;
+	padding: 0.7em;
+	font-weight: bold;
+	font-size: 1em;
+	margin-left: 1em;
+	background-color: rgb(220, 220, 220);
+	color: black ;
+	border: 1px solid #6f6e6e ;
+}
+
+.productpagina section:first-of-type dialog form button:nth-of-type(2) {
+	margin-top: 1em;
+	background-color: #cf0a2c;
+	color: white;
+	text-decoration: none;
+	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	border-radius: 0.25em;
+	margin-bottom: 1em;
+	padding: 0.9em 1.5em;
+	font-size: 1em;
+	position: relative;
+}
+
+dialog form button:nth-of-type(2) {
+	margin-top: 1em;
+	background-color: #cf0a2c;
+	color: white;
+	text-decoration: none;
+	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	border-radius: 0.25em;
+	margin-bottom: 1em;
+	padding: 0.9em 1.5em;
+	font-size: 1em;
+	position: relative;
+}
+
+.productpagina section:first-of-type dialog form a::after {
+	content: "";
+	width: 0.7em;
+	height: 0.7em;
+	border-top: 1.5px solid black;
+	border-right: 1.5px solid black;
+	transform: rotate(45deg); 
+	float: right;
+	margin-top: 0.4em;
+	pointer-events: none;
+}
+
+dialog form a::after {
+	content: "";
+	width: 0.7em;
+	height: 0.7em;
+	border-top: 1.5px solid black;
+	border-right: 1.5px solid black;
+	transform: rotate(45deg); 
+	float: right;
+	margin-top: 0.4em;
+	pointer-events: none;
+}
+
+
+.productpagina section:first-of-type dialog form button:nth-of-type(2) svg {
+	position: absolute;
+	left: 30%;
+	top: 1em;
+}
+
+dialog form button:nth-of-type(2) svg {
+	position: absolute;
+	left: 30%;
+	top: 1em;
+}
+
 /*section 1*/
 main section:first-of-type img {
 	max-width: 100%;
 }
 
 h1 {
-	font-size: 3.5rem;
-	font-family: "ITC Garamond W01 Book Cn";
+	font-size: 3.2rem;
+	font-family: " ITC Garamond W01";
 	margin-left: 0.3em;
 	font-weight: 200;
 	margin-bottom: 1.5rem ;
@@ -1033,7 +1229,7 @@ footer section p:first-of-type {
   }
 
   /* shop de look knop */
-.productpagina main section:first-of-type ul:nth-of-type(2) li button  {
+.productpagina main section:first-of-type ul:nth-of-type(2) li a  {
 	color: #fff;
 	background-color: rgba(21, 20, 21, .8);
 	border-radius: 0.2em;
@@ -1045,9 +1241,10 @@ footer section p:first-of-type {
   	right: 0.5em;
 	font-weight: 100;
 	border: none;
+	text-decoration: none;
 }
 
-.productpagina main section:first-of-type ul:nth-of-type(2) li button::after {
+.productpagina main section:first-of-type ul:nth-of-type(2) li a::after {
     content: '↓';
     position: absolute;
     right: 0.5em;
@@ -1055,7 +1252,7 @@ footer section p:first-of-type {
 }
 
   /* shop de look knop 2*/
-.productpagina main section:first-of-type ul:nth-of-type(3) li button  {
+.productpagina main section:first-of-type ul:nth-of-type(3) li a  {
 	color: #fff;
 	background-color: rgba(21, 20, 21, .8);
 	border-radius: 0.2em;
@@ -1067,9 +1264,10 @@ footer section p:first-of-type {
   	right: 0.5em;
 	font-weight: 100;
 	border: none;
+	text-decoration: none;
 }
 
-.productpagina main section:first-of-type ul:nth-of-type(3) li button::after {
+.productpagina main section:first-of-type ul:nth-of-type(3) li a::after {
     content: '↓';
     position: absolute;
     right: 0.5em;
@@ -1148,6 +1346,14 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 }
 
 /* maat kiezen */
+.productpagina form:first-of-type p:nth-of-type(2) {
+	color: crimson;
+	max-width: 70%;
+	margin: 0;
+	padding-left: 1em;
+	display: none;
+}
+
 .productpagina main section:first-of-type form fieldset:nth-of-type(2) {
 	border: none;
 	padding: 0;
@@ -1285,19 +1491,6 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 	justify-content: space-between;
 }
 
-/*plusjes bij dropdowns*/
-.productpagina main section:first-of-type summary::after {
-	content: "+";
-  	font-size: 1.7em;   
-	margin-right: 0.5em; 
-	margin: 0;      
-	transition: 0.35s ease;
-}
-
-.productpagina main section:first-of-type details[open] summary::after {
-    content: "−";  
-}
-
 
 /*productdetails*/
 .productpagina main section:first-of-type details:nth-of-type(2) {
@@ -1330,14 +1523,7 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 	font-size: 0.9em;
 }
 
-.productpagina main section:first-of-type details:nth-of-type(2) ul {
-	display: list-item;
-  	list-style-type: disc;  
-  	margin-left: 1.5em;
-	margin-bottom: 1em;
-}
-
-.productpagina main section:first-of-type details:nth-of-type(2) ul li {
+.productpagina main section:first-of-type details:nth-of-type(2) p {
 	font-family:"Proxima Nova W01 Regular", Arial, sans-serif;
 	font-size: 0.9em;
 	font-weight: 200;
@@ -1345,7 +1531,19 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 
 .productpagina main section:first-of-type details:nth-of-type(2) p:nth-of-type(4) {
 	font-size: 0.9em;
-	margin-left: 0;
+	margin-left: 1.5em;
+	display: list-item;
+  	list-style-type: disc; 
+}
+
+.productpagina main section:first-of-type details:nth-of-type(2) p:nth-of-type(5) {
+	display: list-item;
+  	list-style-type: disc; 
+	margin-left: 1.5em;
+}
+
+.productpagina main section:first-of-type details:nth-of-type(2) p:nth-of-type(6) {
+	margin-left:0;
 }
 
 .productpagina main section:first-of-type a:last-of-type {
@@ -1360,7 +1558,18 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 	font-weight: 500;
 }
 
+/*plusjes bij dropdowns*/
+.productpagina main section:first-of-type summary::after {
+	content: "+";
+  	font-size: 1.7em;   
+	margin-right: 0.5em; 
+	margin: 0;      
+	transition: 0.35s ease;
+}
 
+.productpagina main section:first-of-type details[open] summary::after {
+    content: "−";  
+}
 
 
 /*maak de look af*/
@@ -1374,9 +1583,11 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 	margin-left: 0;
 }
 
+#maakdelookaf article {
+	position: relative;
+}
 
 .eerstekaart {
-	position: relative;
 	height: 23em;
 	width: 100%;
 	border-radius: 1em;
@@ -1390,6 +1601,7 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 
 .front {
 	backface-visibility: hidden;
+	
 }
 
 .front img:first-of-type {
@@ -1464,6 +1676,9 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
   	box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 	right:clamp(1.5rem, 5vw, 2rem);
 	position: absolute;
+	top: 9em;
+	right: -1.5em;
+	z-index: 10;
 	
 }
 
@@ -1491,8 +1706,11 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
   	border:none;
   	border-radius:20%;
   	font-size:1em;
-  	position:absolute;
   	box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+	position: absolute;
+	top: 9em;
+	left: -1.5em;
+	z-index: 10;
 }
 
 /*achterkant 1e kaart*/
