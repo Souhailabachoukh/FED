@@ -18,8 +18,59 @@
 	--color-text: black;
 	--color-background:#ffffff;
 	
-}
+	/* Header */
+  	--color-header-div: #151415;
+  	--color-header-divtext: white;
+	--color-header: white;
 
+  /* Icon colors */
+  	--color-icon: black;
+
+  /* hoeveelheid winkelwagen span */
+  	--color-span: crimson;
+  	--color-span-text: white;
+
+  /* Nav borders hamburgermenu */
+  	--color-border-light: #c7cacd;
+
+  /* Knoppen */
+  	--color-button: #cf0a2c;
+  	--color-button-text: white;
+
+  /* Dialog */
+  	--color-border-dialog: rgb(146, 145, 145);
+  	--color-background-dialog: rgb(220, 220, 220);
+  	--color-text-dialog: black;
+  	--color-link-border-dialog: #6f6e6e;
+  	--color-dialog-closebutton: #5e5d5d;
+
+  /* Shop nu knop */
+  	--color-shopnubutton-border: #abb0b4;
+
+  /* Footer */
+  	--color-footer-div: #151415;
+  	--color-footer-div-text: white;
+  	--color-footer-button-div: #b90020;
+  	--color-footer-section-background: #fafafa;
+  	--color-footer-link: black;
+
+  /* Productpagina */
+	--color-breadcrumbs: #5c6268;
+  	--color-border-maten: #bec0c3;
+  	--color-border-maten-checked: black;
+  	--color-card-background: rgb(236 236 236 / 54%);
+  	--color-card-button-bordertop: #dddddd;
+  	--color-card-button: white;
+  	--color-pijltje-card: rgb(255, 255, 255);
+
+  /* beoordelingen */
+	--color-buttons-beoordelingen: rgb(207, 10, 44);
+
+	/* Scrollbar */
+	--color-scrollbar-background: #151415;
+	--color-scrollbar: #00000059;
+
+}
 
 
 
@@ -87,7 +138,7 @@ header > ul:first-of-type {
 	list-style: none;
 	padding: 0;
 	padding-top: 0.3em;
-	
+	padding-bottom: 0;
 }
 
 header > ul:first-of-type li:first-of-type { grid-column: 1; }
@@ -310,16 +361,6 @@ header nav li a {
 	color: black;
 }
 
-header nav button:nth-of-type(2) {
-	display: none;
-  	
-}
-
-header nav h2:first-of-type {
-	display: none;
-  	
-}
-
 /*hamburgersubmenu2*/
 header nav ul:nth-of-type(4) {
 	position:fixed;
@@ -376,15 +417,16 @@ main nav ul {
     gap:0.5em;
 	list-style: none;
 	padding: 0;
-	margin: 1em;
-	overflow:auto;
+	margin: 1.3em;
+	overflow-x: auto;
   	scroll-behavior:smooth;
   	white-space: nowrap;
-  	height: 2.5em;
+  	height: 2.4em;
   	scrollbar-width:auto;
   	scrollbar-color:#ccc #fff;
-	margin-bottom: 1em;
-	margin-top: -0.8em;
+	margin-bottom: 0.4em;
+	margin-top: -0.5em;
+	padding-top: 0.3em;
 }
 
 
@@ -439,7 +481,7 @@ main section:first-of-type > button:first-of-type {
 main dialog {
 	position:fixed;
 	bottom: 0;
-	z-index:999;
+	z-index:99;
 	border: 1px solid rgb(146, 145, 145);
 	border-radius: 1.25rem 1.25rem 0 0;
 	background:rgb(220, 220, 220);
@@ -448,7 +490,9 @@ main dialog {
     overlay .15s allow-discrete,
     transform .3s ease-out;  
   	transform: translateY(100%);
-	filter: drop-shadow(2.5px 2.5px 8px rgba(0, 0, 0, .3))
+	filter: drop-shadow(2.5px 2.5px 8px rgba(0, 0, 0, .3));
+	width: 100%;     
+  	max-width: 100%;
 }
 
 main dialog[open] {
@@ -461,8 +505,7 @@ main dialog[open] {
   }
 }
 
-
-
+main > dialog form h2,
 .productpagina section:first-of-type dialog form h2 {
 	border-bottom: 1px solid rgb(90, 89, 89);
 	color: black;
@@ -470,27 +513,20 @@ main dialog[open] {
 	margin-bottom: 1em;
 	padding-bottom: 1em;
 	margin-right: 0.6em;
+	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
+	margin-left: 1em;
 }
 
-dialog form h2 {
-	border-bottom: 1px solid rgb(90, 89, 89);
-	color: black;
-	font-size: 1.5em;
-	margin-bottom: 1em;
-	padding-bottom: 1em;
-	margin-right: 0.6em;
-}
 
 .productpagina section:first-of-type dialog form {
 	position: relative;
-	
 }
 
-dialog form {
+main > dialog form:first-of-type {
 	position: relative;
-	
 }
 
+main > dialog form button:first-of-type,
 .productpagina section:first-of-type dialog form button:first-of-type {
 	text-decoration: none;
 	color: #5e5d5d;
@@ -500,15 +536,7 @@ dialog form {
 	position: absolute;
 }
 
-dialog form button:first-of-type {
-	text-decoration: none;
-	color: #5e5d5d;
-	font-size: 1.5em;
-	top: 0em;
-	right: 0.5em;
-	position: absolute;
-}
-
+main > dialog form a,
 .productpagina section:first-of-type dialog form a {
 	margin-bottom: 1em ;
 	background-color: rgb(220, 220, 220);
@@ -519,21 +547,13 @@ dialog form button:first-of-type {
 	border-radius: 0;
 	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
 	border-radius: 0.25em;
+	display: block;
+	margin-left: 1em;
+	margin-right: 1em;
+	text-decoration: none;
 }
 
-dialog form a {
-	margin-bottom: 1em ;
-	background-color: rgb(220, 220, 220);
-	color: black ;
-	border: 1px solid #6f6e6e ;
-	text-align: left;
-	padding: 0.7em;
-	border-radius: 0;
-	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
-	border-radius: 0.25em;
-}
-
-
+main > dialog form a:nth-of-type(3),
 .productpagina section:first-of-type dialog form a:nth-of-type(3) {
 	text-decoration: none;
 	padding: 0.7em;
@@ -545,17 +565,7 @@ dialog form a {
 	border: 1px solid #6f6e6e ;
 }
 
-dialog form a:nth-of-type(3) {
-	text-decoration: none;
-	padding: 0.7em;
-	font-weight: bold;
-	font-size: 1em;
-	margin-left: 1em;
-	background-color: rgb(220, 220, 220);
-	color: black ;
-	border: 1px solid #6f6e6e ;
-}
-
+main > dialog form button:nth-of-type(2),
 .productpagina section:first-of-type dialog form button:nth-of-type(2) {
 	margin-top: 1em;
 	background-color: #cf0a2c;
@@ -570,24 +580,12 @@ dialog form a:nth-of-type(3) {
 	padding: 0.9em 1.5em;
 	font-size: 1em;
 	position: relative;
+	border: none;
 }
 
-dialog form button:nth-of-type(2) {
-	margin-top: 1em;
-	background-color: #cf0a2c;
-	color: white;
-	text-decoration: none;
-	font-family: "Proxima Nova W01 Regular", Arial, sans-serif;
-	font-weight: bold;
-	display: block;
-	width: 100%;
-	border-radius: 0.25em;
-	margin-bottom: 1em;
-	padding: 0.9em 1.5em;
-	font-size: 1em;
-	position: relative;
-}
 
+
+main > dialog form a::after,
 .productpagina section:first-of-type dialog form a::after {
 	content: "";
 	width: 0.7em;
@@ -600,26 +598,9 @@ dialog form button:nth-of-type(2) {
 	pointer-events: none;
 }
 
-dialog form a::after {
-	content: "";
-	width: 0.7em;
-	height: 0.7em;
-	border-top: 1.5px solid black;
-	border-right: 1.5px solid black;
-	transform: rotate(45deg); 
-	float: right;
-	margin-top: 0.4em;
-	pointer-events: none;
-}
 
-
+main > dialog form button:nth-of-type(2) svg,
 .productpagina section:first-of-type dialog form button:nth-of-type(2) svg {
-	position: absolute;
-	left: 30%;
-	top: 1em;
-}
-
-dialog form button:nth-of-type(2) svg {
 	position: absolute;
 	left: 30%;
 	top: 1em;

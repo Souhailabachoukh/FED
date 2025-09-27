@@ -28,12 +28,17 @@ function sluitMenu () {
 const subMenuButton = document.querySelector("nav ul:first-of-type li:nth-of-type(4) a")
 const navSubMenu = document.querySelector("nav ul:nth-of-type(3)")
 
+const backButton = document.querySelector("header nav button:nth-of-type(2)");
+const subMenuTitel = document.querySelector("header nav h2:first-of-type");
+
 subMenuButton.addEventListener("click", toonSubMenu);
 
 function toonSubMenu () {
   console.log("submenu geopend")
   navSubMenu.classList.toggle("toonSubMenu");
 }
+
+
 
 /*hamburgersubmenu2*/
 const subMenuButton2 = document.querySelector("nav ul:nth-of-type(3) li:nth-of-type(2) a")
@@ -45,6 +50,28 @@ function toonSubMenu2 () {
   console.log("submenu2 geopend")
   navSubMenu2.classList.toggle("toonSubMenu2");
 }
+
+
+/*chatbot uitklappen*/
+const helpButton = document.querySelector("main section:first-of-type > button:first-of-type");
+const helpDialog = document.querySelector("main dialog");
+
+if (helpButton && helpDialog)
+helpButton.addEventListener("click", () => {
+  helpDialog.show();
+});
+
+
+/*chatbot uitklappen homepagina*/
+const helpButton2 = document.querySelector("main > button:first-of-type");
+
+if (helpButton2 && helpDialog)
+helpButton2.addEventListener("click", () => {
+  helpDialog.show();
+});
+
+
+
 
 
 /*Kleur kiezen met juiste carousel*/
@@ -89,6 +116,7 @@ const card = document.querySelector('.eerstekaart');
 card.addEventListener('click', function() {
     card.classList.toggle('is-flipped');
 });
+
 
 /*animatie +1 bij winkelwagen*/
 const shopButton = document.querySelector(".productpagina main section:first-of-type > button:nth-of-type(3)");
