@@ -17,20 +17,45 @@
 
 <body class="productpagina">
     <header>
-		<div><p>Gratis retourneren - Gratis verzending boven de €100</p></div>
+		<div>
+			<p>Gratis retourneren - Gratis verzending boven de €100</p>
+		</div>
 
 		<ul>
-			<li><button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg></button></li>
-			<li><a href="/account"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M240 192C240 147.8 275.8 112 320 112C364.2 112 400 147.8 400 192C400 236.2 364.2 272 320 272C275.8 272 240 236.2 240 192zM448 192C448 121.3 390.7 64 320 64C249.3 64 192 121.3 192 192C192 262.7 249.3 320 320 320C390.7 320 448 262.7 448 192zM144 544C144 473.3 201.3 416 272 416L368 416C438.7 416 496 473.3 496 544L496 552C496 565.3 506.7 576 520 576C533.3 576 544 565.3 544 552L544 544C544 446.8 465.2 368 368 368L272 368C174.8 368 96 446.8 96 544L96 552C96 565.3 106.7 576 120 576C133.3 576 144 565.3 144 552L144 544z"/></svg></a></li>
-			<li><a href="index.html"><img src="images/newbalancelogo.svg" alt="New Balance logo"></a></li>
-			<li><button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg></button></li>
-			<li><a href="/winkelwagen"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/></svg><span>0</span></a></li>
+			<li>
+				<button aria-label="Hamburgermenu openen">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+				</button>
+			</li>
+			<li>
+				<a href="/account" aria-label="Naar je account">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M240 192C240 147.8 275.8 112 320 112C364.2 112 400 147.8 400 192C400 236.2 364.2 272 320 272C275.8 272 240 236.2 240 192zM448 192C448 121.3 390.7 64 320 64C249.3 64 192 121.3 192 192C192 262.7 249.3 320 320 320C390.7 320 448 262.7 448 192zM144 544C144 473.3 201.3 416 272 416L368 416C438.7 416 496 473.3 496 544L496 552C496 565.3 506.7 576 520 576C533.3 576 544 565.3 544 552L544 544C544 446.8 465.2 368 368 368L272 368C174.8 368 96 446.8 96 544L96 552C96 565.3 106.7 576 120 576C133.3 576 144 565.3 144 552L144 544z"/></svg>
+				</a>
+			</li>
+			<li>
+				<a href="index.html">
+					<img src="images/newbalancelogo.svg" alt="New Balance logo">
+				</a>
+			</li>
+			<li>
+				<button aria-label="Zoeken">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+				</button>
+			</li>
+			<li>
+				<a href="/winkelwagen" aria-label="Naar je winkelwagen">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" /></svg>
+					<span>0</span>
+				</a>
+			</li>
 		</ul>
 
-		<nav>
+		<nav aria-label="Hamburgermenu">
 			<a href="index.html"><img src="images/newbalancelogo.svg" alt="New Balance logo"></a>
-			<button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg></button>
-
+			<button aria-label="Hamburgermenu sluiten">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg>
+			</button>
+ 
 			<ul>
 				<li><a href="https://nl.newbalance.eu/nl/nieuw/">Nieuw</a></li>
 				<li><a href="https://nl.newbalance.eu/nl/nieuw/">Heren</a></li>
@@ -42,27 +67,35 @@
 
 			<ul>
 				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M240 192C240 147.8 275.8 112 320 112C364.2 112 400 147.8 400 192C400 236.2 364.2 272 320 272C275.8 272 240 236.2 240 192zM448 192C448 121.3 390.7 64 320 64C249.3 64 192 121.3 192 192C192 262.7 249.3 320 320 320C390.7 320 448 262.7 448 192zM144 544C144 473.3 201.3 416 272 416L368 416C438.7 416 496 473.3 496 544L496 552C496 565.3 506.7 576 520 576C533.3 576 544 565.3 544 552L544 544C544 446.8 465.2 368 368 368L272 368C174.8 368 96 446.8 96 544L96 552C96 565.3 106.7 576 120 576C133.3 576 144 565.3 144 552L144 544z"/></svg>
-					<a href="https://nl.newbalance.eu/on/demandware.store/Sites-BANG-Site/nl_NL/Login-Show"> Inloggen | Registreren</a>
+					<a href="https://nl.newbalance.eu/on/demandware.store/Sites-BANG-Site/nl_NL/Login-Show">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M240 192C240 147.8 275.8 112 320 112C364.2 112 400 147.8 400 192C400 236.2 364.2 272 320 272C275.8 272 240 236.2 240 192zM448 192C448 121.3 390.7 64 320 64C249.3 64 192 121.3 192 192C192 262.7 249.3 320 320 320C390.7 320 448 262.7 448 192zM144 544C144 473.3 201.3 416 272 416L368 416C438.7 416 496 473.3 496 544L496 552C496 565.3 506.7 576 520 576C533.3 576 544 565.3 544 552L544 544C544 446.8 465.2 368 368 368L272 368C174.8 368 96 446.8 96 544L96 552C96 565.3 106.7 576 120 576C133.3 576 144 565.3 144 552L144 544z"/></svg>
+						Inloggen | Registreren
+					</a>
 				</li>
 				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16"><path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/></svg>
-					<a href="https://nl.newbalance.eu/on/demandware.store/Sites-BANG-Site/nl_NL/Login-Show"> Je bestelling volgen</a>
+					<a href="https://nl.newbalance.eu/on/demandware.store/Sites-BANG-Site/nl_NL/Login-Show">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16"><path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/></svg>
+						Je bestelling volgen
+					</a>
 				</li>
 				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg>
-					<a href="https://nl.newbalance.eu/nl/returns/">Retouren</a>
+					<a href="https://nl.newbalance.eu/nl/returns/">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg>
+						Retouren
+					</a>
 				</li>
 				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/></svg>
-					<a href="https://nl.newbalance.eu/nl/klantenservice/">Neem contact met ons op</a>
+					<a href="https://nl.newbalance.eu/nl/klantenservice/">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/></svg>
+						Neem contact met ons op
+					</a>
 				</li>
 				<li>
 					<p>Taal:</p>
 					<a href="https://nl.newbalance.eu/nl/international">Nederlands</a>
 				</li>
 			</ul>
-
+			
 			<ul>
 				<li><a href="https://nl.newbalance.eu/nl/nieuw/">Schoenen</a></li>
 				<li><a href="#">Kleding</a></li>
@@ -72,7 +105,6 @@
 				<li><a href="https://nl.newbalance.eu/nl/nieuw/">Rebel v5</a></li>
 			</ul>
 
-			
 			<ul>
 				<li><a href="https://nl.newbalance.eu/nl/kinderen/kleding/">Alle kleding</a></li>
 				<li><a href="https://nl.newbalance.eu/nl/kinderen/kleding/voetbal/">Voetbal</a></li>
@@ -84,7 +116,7 @@
 
     <main>
         <section>
-			<nav>
+			<nav aria-label="Breadcrumbs">
 				<ul>
 					<li><a href="https://www.newbalance.com/women/">Dames</a></li>
 					<li><a href="https://www.newbalance.com/women/shoes/all-shoes/">Schoenen</a></li>
@@ -94,17 +126,23 @@
             <h1>530 schoenen</h1>
             <p>€120,00</p>
 
-			<button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/></svg></button>
+			<button>
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/></svg>
+			</button>
+			
 			<dialog>
-				<form method="dialog">
-					<h2>Krijg snel hulp</h2>
-					<button class="close" aria-label="sluit hulp">X</button>
-					<a href="https://nl.newbalance.eu/nl/orderstatus">Je bestelling volgen</a>
-					<a href="https://nl.newbalance.eu/nl/returns/">Retouren</a>
-					<a href="https://nl.newbalance.eu/nl/klantenservice/">Veelgestelde vragen</a>
-					<button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/></svg>Chat met ons</button>
-				</form>
-			</dialog>
+			<form method="dialog">
+				<h2>Krijg snel hulp</h2>
+				<button aria-label="sluit hulpvenster">X</button>
+				<a href="https://nl.newbalance.eu/nl/orderstatus">Je bestelling volgen</a>
+				<a href="https://nl.newbalance.eu/nl/returns/">Retouren</a>
+				<a href="https://nl.newbalance.eu/nl/klantenservice/">Veelgestelde vragen</a>
+				<button aria-label="Chat starten">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/></svg>
+					Chat met ons
+				</button>
+			</form>
+		</dialog>
 
 			<ul>
 				<li><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 25 25" aria-hidden="true" focusable="false"><polygon points="25 9.12 15.5669599 9.12 12.512219 0 9.40860215 9.12 0 9.12 7.55131965 14.856 4.47214076 24 12.512219 18.216 20.5522972 24 17.4731183 14.856" ></polygon><path d="" ></path><defs><linearGradient x1="0.00%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 1;"></stop><stop offset="1%" style="stop-color: rgb(239, 239, 239); stop-opacity: 1;"></stop></linearGradient></defs></svg></li>
@@ -117,93 +155,95 @@
 
             <ul>
                 <li>
-                    <img src="images/530schoen1.webp" alt="Foto van de schoen 530 Silver metallic met reflection">
+                    <img src="images/530schoen1.webp" alt="Zijkant rechts van de schoen 530 Silver metallic met reflection">
 					<a href="#maakdelookaf">Shop de look</a>
                 </li>
                 <li>
-                    <img src="images/530schoen2.webp" alt="Foto van de schoen 530 Silver metallic met reflection">
+                    <img src="images/530schoen2.webp" alt="Schuinaanzicht van de schoen 530 Silver metallic met reflection">
 					<a href="#maakdelookaf">Shop de look</a>
                 </li>
                 <li>
-                    <img src="images/530schoen3.webp" alt="Foto van de schoen 530 Silver metallic met reflection">
+                    <img src="images/530schoen3.webp" alt="Zijkant links van de schoen 530 Silver metallic met reflection">
 					<a href="#maakdelookaf">Shop de look</a>
                 </li>
                 <li>
-                    <img src="images/530schoen4.webp" alt="Foto van de schoen 530 Silver metallic met reflection">
+                    <img src="images/530schoen4.webp" alt="Bovenkant van de schoen 530 Silver metallic met reflection">
 					<a href="#maakdelookaf">Shop de look</a>
                 </li>
                 <li>
-                    <img src="images/530schoen5.webp" alt="Foto van de schoen 530 Silver metallic met reflection">
+                    <img src="images/530schoen5.webp" alt="Onderkant van de schoen 530 Silver metallic met reflection">
 					<a href="#maakdelookaf">Shop de look</a>
                 </li>
-             </ul>
+            </ul>
 
-			 <ul>
+			<ul>
                 <li>
-                    <img src="images/schoen530green1.webp" alt="Foto van de schoen 530 Silver metallic met mosaic green">
+                    <img src="images/schoen530green1.webp" alt="Zijkant rechts van de schoen 530 Silver metallic met mosaic green">
 					<a href="#maakdelookaf">Shop de look</a>
 				</li>
                 <li>
-                    <img src="images/schoen530green2.webp" alt="Foto van de schoen 530 Silver metallic met mosaic green">
+                    <img src="images/schoen530green2.webp" alt="Schuinaanzicht van de schoen 530 Silver metallic met mosaic green">
 					<a href="#maakdelookaf">Shop de look</a>
 				</li>
                 <li>
-                    <img src="images/schoen530green3.webp" alt="Foto van de schoen 530 Silver metallic met mosaic green">
+                    <img src="images/schoen530green3.webp" alt="Zijkant links van de schoen 530 Silver metallic met mosaic green">
 					<a href="#maakdelookaf">Shop de look</a>
 				</li>
                 <li>
-                    <img src="images/schoen530green4.webp" alt="Foto van de schoen 530 Silver metallic met mosaic green">
+                    <img src="images/schoen530green4.webp" alt="Bovenkant van de schoen 530 Silver metallic met mosaic green">
 					<a href="#maakdelookaf">Shop de look</a>
 				</li>
                 <li>
-                   <img src="images/schoen530green5.webp" alt="Foto van de schoen 530 Silver metallic met mosaic green">
+                   <img src="images/schoen530green5.webp" alt="Onderkant van de schoen 530 Silver metallic met mosaic green">
 					<a href="#maakdelookaf">Shop de look</a>
 				</li>
-             </ul>
+            </ul>
 			 
 
-             <form>
+            <form>
                 <fieldset>
 					<ul>
                     	<li>
-							<label><input type="radio" name="kleur" value="reflection">
-                        	<img src="images/530schoen1.webp" alt="Foto van de schoen 530 - Silver metallic met reflection"></label>
+							<label>
+								<input type="radio" name="kleur" value="reflection" aria-label="Kies kleur Silver metallic met reflection">
+                        		<img src="images/530schoen1.webp" alt="Foto van de schoen 530 - Silver metallic met reflection">
+							</label>
 						</li>
 						<li>
-                    		<label><input type="radio" name="kleur" value="green">
-                        	<img src="images/530schoenmosaic.webp" alt="Foto van de schoen 530 - Silver metallic met mosaic green"></label>
+                    		<label>
+								<input type="radio" name="kleur" value="green" aria-label="Kies kleur Silver metallic met mosaic green">
+                        		<img src="images/530schoenmosaic.webp" alt="Foto van de schoen 530 - Silver metallic met mosaic green">
+							</label>
 						</li>
 					</ul>
                 </fieldset>
                 <p>Silver metallic met reflection</p>
-				
+
                 <button>Maattabel</button>
                 <fieldset>
                     <legend>Maat</legend>
                     <ul>
-                        <li><label><input type="radio" name="maat" value="36"> 36</label></li>
-                        <li><label><input type="radio" name="maat" value="37"> 37</label></li>
-                        <li><label><input type="radio" name="maat" value="37.5"> 37.5</label></li>
-						<li><label><input type="radio" name="maat" value="38"> 38</label></li>
-                        <li><label><input type="radio" name="maat" value="38.5"> 38.5</label></li>
-                        <li><label><input type="radio" name="maat" value="39.5"> 39.5</label></li>
-                        <li><label><input type="radio" name="maat" value="40"> 40</label></li>
-                        <li><label><input type="radio" name="maat" value="40.5"> 40.5</label></li>
-                        <li><label><input type="radio" name="maat" value="41.5"> 41.5</label></li>
-                        <li><label><input type="radio" name="maat" value="42"> 42</label></li>
-                        <li><label><input type="radio" name="maat" value="42.5"> 42.5</label></li>
-                        <li><label><input type="radio" name="maat" value="43"> 43</label></li>
-                        <li><label><input type="radio" name="maat" value="44"> 44</label></li>
-                        <li><label><input type="radio" name="maat" value="44.5"> 44.5</label></li>
+                        <li><label><input type="radio" name="maat" value="36" aria-label="Kies maat 36">36</label></li>
+                        <li><label><input type="radio" name="maat" value="37" aria-label="Kies maat 37"> 37</label></li>
+                        <li><label><input type="radio" name="maat" value="37.5" aria-label="Kies maat 37.5"> 37.5</label></li>
+						<li><label><input type="radio" name="maat" value="38" aria-label="Kies maat 38"> 38</label></li>
+                        <li><label><input type="radio" name="maat" value="38.5" aria-label="Kies maat 38.5"> 38.5</label></li>
+                        <li><label><input type="radio" name="maat" value="39.5" aria-label="Kies maat 39.5"> 39.5</label></li>
+                        <li><label><input type="radio" name="maat" value="40" aria-label="Kies maat 40"> 40</label></li>
+                        <li><label><input type="radio" name="maat" value="40.5" aria-label="Kies maat 40.5"> 40.5</label></li>
+                        <li><label><input type="radio" name="maat" value="41.5" aria-label="Kies maat 41.5"> 41.5</label></li>
+                        <li><label><input type="radio" name="maat" value="42" aria-label="Kies maat 42"> 42</label></li>
+                        <li><label><input type="radio" name="maat" value="42.5" aria-label="Kies maat 42.5"> 42.5</label></li>
+                        <li><label><input type="radio" name="maat" value="43" aria-label="Kies maat 43"> 43</label></li>
+                        <li><label><input type="radio" name="maat" value="44" aria-label="Kies maat 44"> 44</label></li>
+                        <li><label><input type="radio" name="maat" value="44.5" aria-label="Kies maat 44.5"> 44.5</label></li>
                     </ul>
                 </fieldset>
-             </form>
-            
-            
-            
-             <h2>Breedte</h2>
-             <button>Standaard</button>
-             <button>Toevoegen aan winkelwagen</button>
+            </form>
+ 
+            <h2>Breedte</h2>
+            <button>Standaard</button>
+            <button>Toevoegen aan winkelwagen</button>
             <div>
 				<img src="images/verzending.svg" alt="verzendwagen icoon">
                 <p>Gratis verzending bij bestellingen boven €100</p>
@@ -228,8 +268,12 @@
         <section id="maakdelookaf">
             <h2>Maak de look af</h2>
 			<article>
-				<button><svg viewBox="0 0 9 16" xmlns="http://www.w3.org/2000/svg" class="stylitics-arrow svelte-dimension-collage-m8qbpv"><path d="M0,0 L9,8 L0,16" style="fill: none; stroke-linecap: butt; stroke-linejoin: miter;" class="svelte-dimension-collage-m8qbpv"></path></svg></button>
-				<button><svg viewBox="0 0 9 16" xmlns="http://www.w3.org/2000/svg" class="stylitics-arrow svelte-dimension-collage-m8qbpv"><path d="M0,0 L9,8 L0,16" style="fill: none; stroke-linecap: butt; stroke-linejoin: miter;" class="svelte-dimension-collage-m8qbpv"></path></svg></button>
+				<button aria-label="Volgende artikelen">
+					<svg viewBox="0 0 9 16" xmlns="http://www.w3.org/2000/svg" class="stylitics-arrow svelte-dimension-collage-m8qbpv"><path d="M0,0 L9,8 L0,16" style="fill: none; stroke-linecap: butt; stroke-linejoin: miter;" class="svelte-dimension-collage-m8qbpv"></path></svg>
+				</button>
+				<button aria-label="Vorige artikelen">
+					<svg viewBox="0 0 9 16" xmlns="http://www.w3.org/2000/svg" class="stylitics-arrow svelte-dimension-collage-m8qbpv"><path d="M0,0 L9,8 L0,16" style="fill: none; stroke-linecap: butt; stroke-linejoin: miter;" class="svelte-dimension-collage-m8qbpv"></path></svg>
+				</button>
 				<div class="eerstekaart">
 					<div class="front">
 						<img src="images/artikel2.png" alt="Foto van new balance vest">
@@ -242,7 +286,9 @@
 
 					<div class="back">
 						<h3>Shop deze look</h3>
-						<button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg></button>
+						<button>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg>
+						</button>
                         <ul>
                             <li>
                                 <img src="images/artikel2.png" alt="Foto van new balance vest">
@@ -336,19 +382,29 @@
             <p>Dit product beoordelen</p>
             <ul>
                 <li>
-                    <button><svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg></button>
+                    <button aria-label="1 ster geven">
+						<svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg>
+					</button>
                 </li>
                 <li>
-                    <button><svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg></button>
+                    <button aria-label="2 sterren geven">
+						<svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg>
+					</button>
                 </li>
                 <li>
-                    <button><svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg></button>
+                    <button aria-label="3 sterren geven">
+						<svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg>
+					</button>
                 </li>
                 <li>
-                    <button><svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg></button>
+                    <button aria-label="4 sterren geven">
+						<svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg>
+					</button>
                 </li>
                 <li>
-                    <button><svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg></button>
+                    <button aria-label="5 sterren geven">
+						<svg aria-hidden="true" width="20px" height="20px" fill="none" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CF0A2C" stroke-width="1.5"><g transform="translate(337.000000, 399.000000)"><g transform="translate(241.000000, 0.000000)"><g transform="translate(10.192308, 10.192308)"><path d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z"></path></g></g></g></g></g></svg>
+					</button>
                 </li>
             </ul>
             <p>Beoordeel dit product als eerste</p>
@@ -357,13 +413,10 @@
     
    <footer>
 		<div>
-			<ul>
-				<li><p>Wees als eerste op de hoogte van nieuwe producten</p></li>
-				<li><button>Aanmelden</button></li>
-			</ul>
-			
-			
+			<p>Wees als eerste op de hoogte van nieuwe producten</p>
+			<button>Aanmelden</button>
 		</div>
+
 		<details>
 			<summary>Klantenservice</summary>
 			<ul>

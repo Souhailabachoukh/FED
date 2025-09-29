@@ -71,9 +71,6 @@ helpButton2.addEventListener("click", () => {
 });
 
 
-
-
-
 /*Kleur kiezen met juiste carousel*/
 const optieReflection = document.querySelector ('input[value="reflection"]')
 const optieGreen = document.querySelector ('input[value="green"]')
@@ -100,9 +97,9 @@ function showCarouselGreen() {
 
 
 /*geluidje bij winkelwagenknop*/
-const winkelwagenknop = document.querySelector(".productpagina main section:first-of-type > button:nth-of-type(3)")
+const winkelWagenKnop = document.querySelector(".productpagina main section:first-of-type > button:nth-of-type(3)")
 
-winkelwagenknop.addEventListener('click', winkelwagenAudio)
+winkelWagenKnop.addEventListener('click', winkelwagenAudio)
 
 function winkelwagenAudio () {
     const audio = new Audio("./audio/cashgeluid.mp3");
@@ -119,9 +116,7 @@ card.addEventListener('click', function() {
 
 
 /*animatie +1 bij winkelwagen*/
-const shopButton = document.querySelector(".productpagina main section:first-of-type > button:nth-of-type(3)");
-
-shopButton.addEventListener('click', addToShoppingCart)
+winkelWagenKnop.addEventListener('click', addToShoppingCart)
 
 function addToShoppingCart() {
     let shoppingCartAmount = document.querySelector("header > ul:first-of-type li:nth-of-type(5) span");
