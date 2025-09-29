@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Startniveau: blauw
 
   #### Je focus:
-  Focus: surface plane
+  Focus: Surface Plane
  
 </details>
 
@@ -57,6 +57,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+
+  Screenreader test:
   - Het is duidelijk dat je op de homepagina bent van New Balance en er een image zichtbaar is, maar je weet niet wat voor afbeelding. Ook wordt er opgenoemd dat er navigation is,maar wordt de informatie onder elk kopje niet helemaal opgelezen. 
  
   - Er wordt aangegeven bij welke heading je zit, en deze wordt opgelezen. Ook wordt aangegeven dat dat de laatste heading is op een pagina als dat zo is.
@@ -72,6 +74,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Zowel de maten die wel als niet op voorraad zijn worden opgenoemd.
 
   - De knop standaard wordt niet opgenoemd wanneer je door de pagina navigeert op de productpagina.
+
+
+  WCAG checklist:
+  - Bij sommige knoppen is het niet duidelijk dat je erop kunt klikken.
+
+  - de HTML heeft 50+ errors.
+
+  - Er zijn geen duidelijke headings in de code.
+
+  - De tab-toets gaat niet langs elk element in de website. Hij gaat niet langs de tekst op de website, niet elke image en kopjes (h1, h2, h3). Wel gaat hij langs elke button en link.
+
+  - In de code zijn er niet echt lijstjes te zien, er wordt vooral div gebruikt in de code.
+
+  - Bij images wordt niet altijd een alt gebruikt. Als er een alt wordt gebruikt dan is hij best onduidelijk, bijvoorbeeld alt="530". Naast alt wordt er ook veel 'title' gebruikt bij images.
+
+  - Voor buttons wordt het 'button' element gebruikt en voor linkjes het 'a' element.
 
 </details>
 
@@ -104,7 +122,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
   Dit ging goed:
   - Tijdens het coderen van de HTML van de homepagina ging het coderen van de main best soepel.
 
@@ -126,10 +143,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - De images die ik bij de boordelingen had gezet, kan ik beter svg's van maken.
+  - Van de producten in mijn pagina kan ik of een lijstje met li's gebruiken of er articles van maken.
+  - Op de productpagina kan ik het stukje waarbij je de kleuren en maten kan kiezen het best in een form zetten met daarin een fieldset etc.
+  - In de readme ook de bevindingen van de WCAG checklist zetten. 
+  - Verder ziet alles er goed uit.
 
 </details>
 
@@ -143,7 +161,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Dit ging goed:
+  - Het gebruiken van grid en flexbox op mijn homepagina en productpagina.
+  - De vormgeving van mijn website zoveel mogelijk overeen laten komen met de echte website.
+
+  Dit was lastig:
+  - Dit stuk op mijn productpagina vond ik best lastig: <img src="readme-images/Screenshot-productpagina.png" alt="section maak de look af van mijn productpagina">
+  Hier zal ik vragen over stellen tijdens het voortgangsgesprek.
 
 
   ### Agenda voor meeting
@@ -159,10 +183,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Van het lastige stukje in mijn productpagina, kan ik het best articles maken met daarin een div van het hele kaartje en dan weer een aparte div van de voorkant en van de achterkant. Van deze div's kan ik dan weer classes maken om het makkelijker te stylen.
+  - Voor de scrollbars kan ik de carousel opdracht in codepen gebruiken.
+  - De breadcrumbs bovenaan in mijn productpagina kan een nav zijn met daarin een ul. 
+  - De website ziet er al erg goed uit en ik ben goed opweg. 
 
 </details>
 
@@ -178,6 +202,44 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  Screenreader test:
+  - De screenreader leest alles op de pagina van boven tot beneden op. Dit is verbeterd ten opzichte van de echte website, omdat de screenreader op de echte website heel veel dingen oversloeg.
+
+  - Ook het hamburgermenu wordt volledig opgelezen, ookal heb je er niet op geklikt.
+
+  - Bij elk element wordt er opgenoemd wat het is: button, link, image, heading, nav etc.
+
+  - Bij elke heading wordt er aangegeven wat voor heading het is: h1, h2, h3 etc.
+
+  - Duidelijke aria-labels worden opgelezen voor meer duidelijkheid, terwijl op de echte website juist vaak verwarrende woorden worden gebruikt. 
+
+  - De screenreader verteld vooraf hoeveel list items er zijn (in een ul) en gaat ze dan allemaal langs met alle informatie die erin staat. 
+
+  - De elementen die in een carousel zitten worden vanzelf afgespeeld en allemaal opgenoemd. Dit is ook verbeterd, omdat de screenreader op de echte site alleen de elementen in een carousel opnoemt die in beeld zijn en daar stopt.
+
+  - Alle tekst op de pagina's wordt ook opgelezen. Op de echte site wordt niet altijd alle tekst en andere elementen opgelezen. 
+
+  - Bij kleur kiezen is het niet helemaal duidelijk dat je op de afbeeldingen kunt klikken, omdat het eigenlijk images zijn. 
+
+  --> Over het algemeen vind ik dat mijn website voor screenreaders is verbeterd ten opzichte van de echte website.
+
+
+
+  WCAG checklist:
+  - De HTML bevat geen errors en is valid.
+
+  - Voor images worden altijd alt gebruikt en zo duidelijk mogelijk voor de gebruiker. 
+
+  - De headings zijn netjes in logische hiërarchie geordend (h1, h2, h3). Op de officiële site klopt heading-structuur soms niet of gebruiken div’s voor titels.
+
+  - In mijn site is er een geluidje + animatie bij de winkelwagen-knop toegevoegd. Hierdoor krijgen gebruikers zowel visueel als in geluid feedback. 
+
+  - Knoppen zonder tekst hebben duidelijke aria-labels zoals: "Menu openen", "Menu sluiten", "Zoeken", "Winkelwagen". Op de officiële site mist dit.
+
+  - Mijn chatbot-popup bevat aria-label="Help en chat"
+
+een duidelijke sluitknop met aria-label="Sluit helpvenster".
+
 </details>
 
 
@@ -190,7 +252,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Dit ging goed:
+  - De puntjes op de i zetten voor beide pagina's.
+  - Beginnen aan de surface plane. 
+
+  Dit vond ik lastig:
+  - Javascript toepassen, aangezien ik het best lastig vind en ik de code simpel moet houden om te kunnen begrijpen. 
 
 
   ### Agenda voor meeting
@@ -204,12 +271,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Laatste week geen voortgangsgesprek gehad. 
 
 </details>
 
