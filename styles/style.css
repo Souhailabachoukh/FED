@@ -22,38 +22,38 @@
   	--color-header-div: #151415;
 	--color-close-button: #efefef;
 
-  /* hoeveelheid winkelwagen span */
+  	/* hoeveelheid winkelwagen span */
   	--color-span: crimson;
 
-  /* Nav borders hamburgermenu */
+  	/* Nav borders hamburgermenu */
   	--color-border-light: #c7cacd;
 
 	/* Nav main */
 	--color-categorie-nav: #f2f2f3;
 	--color-review-sterren:rgb(233, 232, 232);
 
-  /* Knoppen */
+  	/* Knoppen */
   	--color-button: #cf0a2c;
   	--color-button-text: white;
 
-  /* Dialog */
+  	/* Dialog */
   	--color-border-dialog: rgb(146, 145, 145);
   	--color-background-dialog: rgb(220, 220, 220);
   	--color-link-border-dialog: #6f6e6e;
   	--color-dialog-closebutton: #5e5d5d;
 	--color-h2-dialog:rgb(90, 89, 89);
 
-  /* Shop nu knop */
+  	/* Shop nu knop */
   	--color-shopnubutton-border: #abb0b4;
 
-  /* Shop de look knop */
+  	/* Shop de look knop */
 	--color-shopdelook-button:rgba(21, 20, 21, .8);
 
-  /* Footer */
+  	/* Footer */
   	--color-footer-button-div: #b90020;
   	--color-footer-section-background: #fafafa;
 
-  /* Productpagina */
+  	/* Productpagina */
 	--color-breadcrumbs: #5c6268;
   	--color-border-maten: #bec0c3;
   	--color-card-background: rgb(236 236 236 / 54%);
@@ -63,7 +63,7 @@
 	--color-backcard-borders: #2121211f;
 	--color-maten-checked:#ebeced;
 
-  /* beoordelingen */
+  	/* beoordelingen */
 	--color-buttons-beoordelingen: rgb(207, 10, 44);
 
 	/* Scrollbar */
@@ -254,6 +254,7 @@ header nav li {
 	margin-top: 1.2em;
 }
 
+/*https://css-tricks.com/almanac/properties/p/pointer-events/*/
 header nav ul:first-of-type li::after {
 	content: "";
 	width: 0.7em;
@@ -358,7 +359,6 @@ header nav a:first-of-type img {
 }
 
 header nav li a {
-	font-size: 1.5em;
 	text-decoration: none;
 	font-size: 1rem;
 	color: var(--color-text);
@@ -1497,6 +1497,7 @@ form fieldset:first-of-type input[type="radio"]:checked + img {
 	font-size: 0.9em;
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type*/
 .productpagina main section:first-of-type details:nth-of-type(2) p:nth-of-type(2) {
 	display: list-item;
   	list-style-type: disc;   

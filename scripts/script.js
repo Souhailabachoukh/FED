@@ -101,6 +101,7 @@ const winkelWagenKnop = document.querySelector(".productpagina main section:firs
 
 winkelWagenKnop.addEventListener('click', winkelwagenAudio)
 
+/*https://pixabay.com/nl/sound-effects/search/cash/*/
 function winkelwagenAudio () {
     const audio = new Audio("./audio/cashgeluid.mp3");
     audio.play();
@@ -108,6 +109,7 @@ function winkelwagenAudio () {
 
 
 /*flipcard - maak je look af*/
+/*https://codepen.io/mondal10/pen/WNNEvjV*/
 const card = document.querySelector('.eerstekaart');
 
 card.addEventListener('click', function() {
@@ -128,7 +130,7 @@ function addToShoppingCart() {
     shoppingCartAmount.classList.add("updated");
 
     setTimeout(function(){
-  shoppingCartAmount.classList.remove("updated");
+        shoppingCartAmount.classList.remove("updated");
  }, 400);
 }
 

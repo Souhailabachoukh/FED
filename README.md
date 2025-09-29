@@ -102,6 +102,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### de hele pagina: 
   <img src="readme-images/breakdownschets-homepagina.jpg" width="375px" alt="breakdown van de homepagina">
+
   <img src="readme-images/breakdownschets-productpagina.jpg" width="375px" alt="breakdown van de productpagina">
 
   ### dynamisch deel (bijv menu): 
@@ -181,9 +182,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  hier na afloop snel de uitkomsten van de meeting vastleggen:
 
-  - Van het lastige stukje in mijn productpagina, kan ik het best articles maken met daarin een div van het hele kaartje en dan weer een aparte div van de voorkant en van de achterkant. Van deze div's kan ik dan weer classes maken om het makkelijker te stylen.
+  - Van het lastige stukje in mijn productpagina (flipcard), kan ik het best articles maken met daarin een div van het hele kaartje en dan weer een aparte div van de voorkant en van de achterkant. Van deze div's kan ik dan weer classes maken om het makkelijker te stylen.
   - Voor de scrollbars kan ik de carousel opdracht in codepen gebruiken.
   - De breadcrumbs bovenaan in mijn productpagina kan een nav zijn met daarin een ul. 
   - De website ziet er al erg goed uit en ik ben goed opweg. 
@@ -236,9 +237,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   - Knoppen zonder tekst hebben duidelijke aria-labels zoals: "Menu openen", "Menu sluiten", "Zoeken", "Winkelwagen". Op de officiële site mist dit.
 
-  - Mijn chatbot-popup bevat aria-label="Help en chat"
+  - Mijn chatbot-popup bevat aria-label="Chat starten" en een duidelijke sluitknop met aria-label="Sluit helpvenster".
 
-een duidelijke sluitknop met aria-label="Sluit helpvenster".
+  - In mijn site gebruik ik <nav aria-label="Hamburgermenu"> en <nav aria-label="Categorie menu">. De echte site gebruikt alleen <nav> zonder beschrijving en is dus minder duidelijk.
+
+  - De tab-toets gaat niet langs alle tekst op de pagina.
+
+  - In mijn site gebruik ik list elements.
+
 
 </details>
 
@@ -285,19 +291,37 @@ een duidelijke sluitknop met aria-label="Sluit helpvenster".
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/screenshot-winkelwagen.png" width="375px" alt="uitomst opdracht winkelwagen">
+  <img src="readme-images/screenshot-has-maten.png" width="375px" alt="uitomst opdracht has:()">
+  <img src="readme-images/screenshot-carousel.png" width="375px" alt="uitomst opdracht carousel">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Korte omschrijving met plaatjes:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Wat goed ging en wat ik heb geleerd is het toepassen van grid en flexbox op mijn eigen website:
+  <img src="readme-images/screenshot-grid.png" width="375px" alt="top">
+  <img src="readme-images/screenshot-flexbox.png" width="375px" alt="top">
+
+  Ook het proberen om de vormgeving zo goed mogelijk na te coderen is uiteindelijk best goed gelukt:
+  <img src="readme-images/screenshot-vormgeving.png" width="375px" alt="top">
+
+  Ik heb ook geleerd hoe ik een werkende hamburgermenu maak:
+  <img src="readme-images/screenshot-hamburgermenu.png" width="375px" alt="top">
+
+  Verder heb ik ook nog geleerd hoe ik een pop up maak met dialog:
+  <img src="readme-images/screenshot-popup.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Korte omschrijving met plaatjes:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Wat ik lastig vond was het maken van een flipcard. Uiteindelijk is het me gelukt om er eentje te maken met behulp van de studenassistent, maar niet om door te klikken naar meerdere flipcards:
+  <img src="readme-images/screenshot-maakdelookaf.png" width="375px" alt="top">
+
+  Het toevoegen van een nieuwe header en terugknop bij de subhamburgermenu's vond ik erg lastig en is me uiteindelijk niet gelukt:
+  <img src="readme-images/screenshot-header-hamburgermenu.png" width="375px" alt="top">
+
 </details>
 
 
@@ -313,8 +337,12 @@ een duidelijke sluitknop met aria-label="Sluit helpvenster".
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://www.codeguage.com/v1/courses/html/forms-fieldsets 
+  2. https://css-tricks.com/almanac/properties/p/pointer-events/ 
+  3. https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type 
+  4. https://pixabay.com/nl/sound-effects/search/cash/  
+  5. https://icons.getbootstrap.com/icons/chat-square/  
+  6. https://heroicons.com/outline  
+  7. https://codepen.io/mondal10/pen/WNNEvjV 
 
 </details>
